@@ -1,0 +1,26 @@
+{
+  "name": "gb-uploadimg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GB-Sources/gb-uploadImg.git"
+  },
+  "keywords": [
+    "image-upload",
+    "discord",
+    "CDN",
+    "form",
+    "application"
+  ],
+  "author": "GB_Sources",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GB-Sources/gb-uploadImg/issues"
+  },
+  "homepage": "https://github.com/GB-Sources/gb-uploadImg#readme"
+}
