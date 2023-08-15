@@ -63,14 +63,14 @@ class Routing{
   }
 
   exchangeimg(){
-    var data = this.db.getAllData("data");
+    var _dat = this.db.getAllData("data");
     var pm = this.query;
 
-    var res = data.find(e => e[0] == pm );
+    var data = _dat.find(e => e[0] == pm ) || [];
 
     var obj = {
       code: 200,
-      data: res
+      data
     }
 
     return this.send(obj);

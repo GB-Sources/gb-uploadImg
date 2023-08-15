@@ -13,14 +13,15 @@ class gb_upload {
 
     init() {
         const base = this.base,
-            channel_id = this.channel_id,
-            makeid = this.makeid;
+        channel_id = this.channel_id,
+        makeid = this.makeid;
         document
         .querySelectorAll(".gb-uploadimg")
-        .forEach(function(e){
-            const server = base + "?m=uploadimg&channel_id="+channel_id+"&q="+ makeid(8)
+        .forEach(function(e) {
+            const server = base + "?m=uploadimg&channel_id=" + channel_id + "&q=" + makeid(8)
             var [input, button] = e.children;
-            button.onclick = function(){
+            button.onclick = function() {
+            var base_text = button.innerText;
             var win = window.open(server, "_blank");
             var timer = setInterval(async function() {
                 button.innerText = "please await..."
@@ -31,12 +32,12 @@ class gb_upload {
                 var res = await fetch(exchange);
                 res = await res.json();
 
-                if(res.data !== []){
+                if (res.data.length) {
                     input.value = res.data[1];
                     button.innerText = "done"
                 } else {
-                    button.innerText = "upload";
-                    button.disabled = "false";
+                    button.innerText = base_text;
+                    button.removeAttribute("disabled");
                 }
                 // console.log(button)
                 // alert('closed');
