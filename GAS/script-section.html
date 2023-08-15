@@ -18,7 +18,7 @@
     function updateUrl(url) {
       var div = document.getElementById('output');
       if(isValidURL(url)){
-        div.innerHTML = '<div class="alert alert-success" role="alert"><a href="' + url + '">File uploaded successfully!</a></div>';
+        div.innerHTML = '<div class="alert alert-success" role="alert"><a href="' + url + '">File uploaded successfully!</a> close this tab to end the session</div>';
         document.getElementById("myForm").reset();
       }else{
         //Show warning message if file is not uploaded or provided
