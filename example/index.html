@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Test GB-uploadImg</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="/across-tabs.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-8 m-auto">
+            <h3>Ordinary formapp</h3>
+            <form action="">
+                <div class="input-group mb-3 gb-uploadimg">
+                <input type="text" class="form-control" placeholder="image url" aria-label="image url"
+                    aria-describedby="button-addon2" disabled>
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+                    Open Upload Section
+                </button>
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="../src/gb-uploadImg.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+
+
+    <script>
+        // your googleappscript webapp token
+        const tk = "AKfycbzuDK6FTXoQG5s7TTbjDLUueXG7vK59bT5tch51Gq44MHna3lodtuxVDCzNJx6YDNM";
+
+        // your discord channel id
+        const channel_id = "1078331267453550715";
+
+        // init 
+        const uploader = new gb_upload(tk, channel_id);
+
+        uploader.init();
+    </script>
+</body>
+
+</html>
